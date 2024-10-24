@@ -11,7 +11,7 @@
 <br>
 
 # BlendNations Repository
-BlendNations allow users to blend and blend flags.
+BlendNations allow users to blend flags.
 
 <br>
 
