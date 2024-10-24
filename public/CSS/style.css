@@ -1,0 +1,32 @@
+/*#region HTML*/
+html {
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    margin-top: 12rem;
+}
+/*#endregion HTML*/
+
+/*#region CANVAS*/
+#responsiveCanvas {
+    width: 100%;
+}
+/*#endregion CANVAS*/
+
+/*#region ALMOSTFOOTER*/
+.iconPositionFooter {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.iconFooter svg {
+    fill: rgb(75, 85, 99);
+    transition: fill 0.3s ease;
+}
+
+.iconFooter svg:hover {
+    fill: rgb(17, 24, 39);
+}
+/*#endregion ALMOSTFOOTER*/
