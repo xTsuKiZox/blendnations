@@ -40,27 +40,6 @@ async function populateCountrySelect() {
 }
 populateCountrySelect()
 
-/**
- * Modify the canvas text to download the image following the choice of one or two countries depending on the device
-*/
-const getDeviceType = () => {
-    const ua = navigator.userAgent;
-    let textDownload = document.getElementById("textDownload")
-    if (/(tablet|ipad|playbook|silk)|(android(?!.*mobi))/i.test(ua)) {
-        textDownload.textContent = "To download your new flag, hold your finger on the image and download it!"
-    }
-    if (
-        /Mobile|iP(hone|od)|Android|BlackBerry|IEMobile|Kindle|Silk-Accelerated|(hpw|web)OS|Opera M(obi|ini)/.test(
-            ua
-        )
-    ) {
-        textDownload.textContent = "To download your new flag, hold your finger on the image and download it!"
-
-    }
-    textDownload.textContent = "To download your new flag, right click!"
-};
-getDeviceType()
-
 //#region D/L
 let mode = "light";
 const moonSVG = `
@@ -78,7 +57,9 @@ document.getElementById("divForMode").addEventListener("click", function () {
     let bodyPage = document.getElementById("bodyPage")
     let logo = document.getElementById("logo")
     let borderCanvas = document.getElementById("responsiveCanvas")
-    let textDownload = document.getElementById("textDownload")
+    let downloadButton = document.getElementById("downloadButton")
+    let path1 = document.getElementById("path1")
+    let path2 = document.getElementById("path2")
 
     if (mode === "light") {
         modeIcon.remove();
@@ -86,7 +67,9 @@ document.getElementById("divForMode").addEventListener("click", function () {
         bodyPage.style.backgroundColor = "black"
         borderCanvas.style.border = "1px solid white"
         logo.src = "./public/IMG/logoW.png"
-        textDownload.style.color = "white"
+        downloadButton.className = "btn dark"
+        path1.style.fill = "#000000"
+        path2.style.fill = "#000000"
         mode = "dark";
     } else {
         modeIcon.remove();
@@ -94,7 +77,9 @@ document.getElementById("divForMode").addEventListener("click", function () {
         bodyPage.style.backgroundColor = "white"
         borderCanvas.style.border = "1px solid gray"
         logo.src = "./public/IMG/logoB.png"
-        textDownload.style.color = "black"
+        downloadButton.className = "btn light"
+        path1.style.fill = "#ffffff"
+        path2.style.fill = "#ffffff"
         mode = "light";
     }
 });
