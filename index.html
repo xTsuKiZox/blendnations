@@ -150,9 +150,17 @@
             const downloadLink = document.createElement("a");
             downloadLink.href = dataURL;
             downloadLink.download = "blendnations.png";
-            downloadLink.click();
+
+            // Vérifier si on est sur mobile
+            if (navigator.userAgent.match(/iPhone|iPad|iPod|Android/i)) {
+                // Ouvre l'image dans un nouvel onglet sur mobile
+                window.open(dataURL, '_blank');
+            } else {
+                downloadLink.click(); // Télécharge directement sur desktop
+            }
         }
         document.getElementById("downloadButton").addEventListener("click", downloadCanvasImage);
+
 
         /**
      * All events like country changes and other
