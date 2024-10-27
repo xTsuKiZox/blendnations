@@ -6,12 +6,14 @@ html {
 .wrapper {
     margin-top: 12rem;
 }
+
 /*#endregion HTML*/
 
 /*#region CANVAS*/
 #responsiveCanvas {
     width: 100%;
 }
+
 /*#endregion CANVAS*/
 
 /*#region ALMOSTFOOTER*/
@@ -29,4 +31,51 @@ html {
 .iconFooter svg:hover {
     fill: rgb(17, 24, 39);
 }
+
 /*#endregion ALMOSTFOOTER*/
+
+
+/*#region BTNDL*/
+.dark {
+    color: black !important;
+    background: white !important;
+    border-color: white !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+
+.light {
+    color: #fff !important;
+    background: black !important;
+    border-color: black !important;
+    --bs-btn-hover-color: #fff;
+    --bs-btn-hover-bg: #0b5ed7;
+    --bs-btn-hover-border-color: #0a58ca;
+    --bs-btn-focus-shadow-rgb: 49, 132, 253;
+    --bs-btn-active-color: #fff;
+    --bs-btn-active-bg: #0a58ca;
+    --bs-btn-active-border-color: #0a53be;
+    --bs-btn-active-shadow: inset 0 3px 5px rgba(0, 0, 0, 0.125);
+    --bs-btn-disabled-color: #fff;
+    --bs-btn-disabled-bg: #0d6efd;
+    --bs-btn-disabled-border-color: #0d6efd;
+}
+
+
+.cercle {
+    width: 60px;
+    height: 40px;
+    border-radius: 60px / 40px;
+    background: orange;
+}
+
+/*#endregion BTNDL*/
